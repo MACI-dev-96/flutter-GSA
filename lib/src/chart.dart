@@ -73,26 +73,6 @@ class ChartPageState extends State<ChartPage> {
                   children: tableRowGenerator(data),
                 ),
               ),
-              // Container(
-              //   height: 200,
-              //   child: Padding(
-              //     padding: const EdgeInsets.all(8.0),
-              //     //Initialize the spark charts widget
-              //     child: SfSparkLineChart.custom(
-              //       //Enable the trackball
-              //       trackball: SparkChartTrackball(
-              //           activationMode: SparkChartActivationMode.tap),
-              //       //Enable marker
-              //       marker: SparkChartMarker(
-              //           displayMode: SparkChartMarkerDisplayMode.all),
-              //       //Enable data label
-              //       labelDisplayMode: SparkChartLabelDisplayMode.all,
-              //       xValueMapper: (int index) => data[index].coupleNumber.toString(),
-              //       yValueMapper: (int index) => data[index].etime,
-              //       dataCount: 9,
-              //     ),
-              //   ),
-              // )
             ],
           ),
         ),
@@ -158,6 +138,6 @@ executionTimeData(max) {
   }
   stopwatch.stop();
   int stpet = stopwatch.elapsedMilliseconds.toInt();
-  print(stpet);
+  print('Tiempo total de ejecución = $stpet');
   return chartData;
 }
