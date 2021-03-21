@@ -1,7 +1,7 @@
 /*
   Importación de los paquetes de las librerias material 
   (encargada de la compatibilidad de dart con flutter),
-  y del archivo achart.dart, en dónde se realizan las
+  y del archivo chart.dart, en dónde se realizan las
   tareas de graficación y tabulación de datos.
 */
 import 'package:algoritmo_g_s_runtime/src/chart.dart';
@@ -18,10 +18,10 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       /*
-        Al ser ejecutada, la aplicación invoca a las clase
-        ChartPage, en donde se realizan las tareas de graficación,
-        y ejecución del código.
-      */
+          Al ser ejecutada, la aplicación invoca a las clase
+          ChartPage, en donde se realizan las tareas de graficación,
+          y ejecución del código.
+        */
       title: 'Algoritmo G-S graficación',
       debugShowCheckedModeBanner: false,
       home: ChartPage(),

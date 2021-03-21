@@ -34,7 +34,7 @@ class ChartPageState extends State<ChartPage> {
     automático de parejas n implementada en la misma.
     La lista data, contiene tuplas del tipo (tiempo de ejecución, número de parejas)
   */
-  List data = executionTimeData(5);
+  List data = executionTimeData(10);
   @override
   Widget build(BuildContext context) {
     //Se obtiene el tamaño de la pantalla del dispositivo donde se mostrarán las gráficas
@@ -64,7 +64,7 @@ class ChartPageState extends State<ChartPage> {
             children: [
               Container(
                 height: 300,
-                width: 1200,
+                width: screenSize.width,
                 /*
                   "child", es el widget hijo de un widget padre, ya que la 
                   renderización de objetos se da de acuerdo a estas jerarquias.
@@ -164,11 +164,12 @@ class ChartPageState extends State<ChartPage> {
     );
   }
 }
+
 /*
   función encargada de acomodar los datos de la lista data
   en filas.
 */
-tableRowGenerator(data) {
+tableRowGenerator(data)  {
   //Se crean los encabezados de las columnas
   List<TableRow> tableRowList = [
     TableRow(
@@ -213,6 +214,7 @@ tableRowGenerator(data) {
   }
   return tableRowList;
 }
+
 /*
   Se crea una clase ExecutionTime, que nos permita manejar los datos
   retornados por el código, especificamente, el tiempo de ejecución
@@ -241,7 +243,7 @@ executionTimeData(max) {
     que nos permite manejar los datos en tuplas, y así poder graficarlos.
   */
   var stopwatch = Stopwatch()..start();
-  
+
   //Se realiza un reseteo al cronómeto, para ponerlo en ceros.
   stopwatch.reset();
   //Se incia la cuenta del cronómetro.
@@ -301,6 +303,6 @@ executionTimeData(max) {
     en la consola
   */
   print('Tiempo total de ejecución = $stpet');
-  //re retorna la lista de tuplas chartData. 
+  //re retorna la lista de tuplas chartData.
   return chartData;
 }
